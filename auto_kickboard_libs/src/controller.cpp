@@ -1,4 +1,4 @@
-//#include "d2c_robot_libs/robot_node.hpp"
+#include "auto_kickboard_libs/robot_node.hpp"
 
 Ssingssing::Ssingssing(ros::NodeHandle *nh, ros::NodeHandle *nh_priv)
 {
