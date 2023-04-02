@@ -17,7 +17,7 @@ int main(int argc, char** argv)
     cout << "TEST" << endl;
 
     
-    //Mintchoco1 mincho(&nh, &nh_priv);
+    Ssingssing sing(&nh, &nh_priv);
     ros::spin();
     return 0;
 }
