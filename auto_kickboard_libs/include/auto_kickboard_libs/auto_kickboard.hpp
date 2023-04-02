@@ -7,9 +7,9 @@
 #include "iostream"
 #include "sensor_msgs/JointState.h"
 
-#include "d2c_robot_msgs/D2cRobot.h"
-#include "d2c_robot_msgs/DynamixelCommand.h"
-#include "d2c_robot_msgs/JointPosition.h"
+#include "ssing_msgs/Ssing.h"
+#include "ssing_msgs/DynamixelCommand.h"
+#include "ssing_msgs/JointPosition.h"
 
 #include <std_srvs/Trigger.h>
 #include <Eigen/Dense>
@@ -21,7 +21,7 @@ class Ssingssing
         Ssingssing(ros::NodeHandle *nh, ros::NodeHandle *nh_priv);
         ~Ssingssing();
         void controlLoop(const ros::TimerEvent& event);
-        void CommandmsgCallback(const d2c_robot_msgs::D2cRobot::ConstPtr& msg);
+        void CommandmsgCallback(const ssing_msgs::Ssing::ConstPtr& msg);
         void publishCommands(std::vector<float> target_joint_position);
         
 
@@ -40,7 +40,7 @@ class Ssingssing
         float something;
         ServingCommand serving_command;
         sensor_msgs::JointState joint_state;
-        d2c_robot_msgs::DynamixelCommand d2c;
+        ssing_msgs::DynamixelCommand ssing;
         std::vector<std::string> joint_name = {"joint1","joint2","joint3","joint4"};
         int x_min, y_min, x_max, y_max;
         int object_x = 0;

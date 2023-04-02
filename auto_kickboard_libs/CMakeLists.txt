@@ -15,12 +15,12 @@ catkin_package(
 )
 
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
 add_executable(auto_kickboard 
     src/auto_kickboard.cpp)
-add_dependencies(auto_kickboard ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+#add_dependencies(auto_kickboard ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(auto_kickboard ${catkin_LIBRARIES} )
-
+add_dependencies(auto_kickboard ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

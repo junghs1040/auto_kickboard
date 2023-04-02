@@ -3,7 +3,7 @@
 #include <string>
 
 #include "ros/ros.h"
-//#include "auto_kickboard/auto_kickboard.hpp"
+#include "auto_kickboard_libs/auto_kickboard.hpp"
 
 using namespace std;
 

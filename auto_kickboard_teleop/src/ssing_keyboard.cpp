@@ -70,7 +70,7 @@ int main(int argc, char** argv)
   ros::NodeHandle nh;
 
   // Init cmd_vel publisher
-  ros::Publisher pub = nh.advertise<ssing_msgs::Sssing>("ssing_msg", 1);
+  ros::Publisher pub = nh.advertise<ssing_msgs::Ssing>("ssing_msg", 1);
 
 
   ssing_msgs::Ssing ssing;

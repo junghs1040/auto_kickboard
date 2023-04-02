@@ -16,7 +16,7 @@ include_directories(
 )
 
 catkin_package(
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
   CATKIN_DEPENDS roscpp message_runtime
 )
 
