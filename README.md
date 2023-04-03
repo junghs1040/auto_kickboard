@@ -23,7 +23,13 @@ Hardware Information:
 ## 1. Project Introduction  
 
 ## 2. Features  
-  
+our project is to make Auto driving electronic kickboard     
+we named our kickboard as "Ssing ssing"!!    
+     
+we can control the kickboard with keyboard     
+   w
+ a s d    
+    
 ## 3. Related Source  
   
 ## 4. How to Start  
