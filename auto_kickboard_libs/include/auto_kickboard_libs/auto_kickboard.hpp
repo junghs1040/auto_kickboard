@@ -12,7 +12,7 @@
 #include "ssing_msgs/JointPosition.h"
 
 #include <std_srvs/Trigger.h>
-#include <Eigen/Dense>
+//#include <Eigen/Dense>
 
 
 class Ssingssing
@@ -38,7 +38,7 @@ class Ssingssing
         std::vector<std::vector<double>> target_joint_position;
         int control_command_; // 0: Initialize 1: Pick up , 2: Pull down, 3: Stretch Arm, 4:Pull Arm
         float something;
-        ServingCommand serving_command;
+        //ServingCommand serving_command;
         sensor_msgs::JointState joint_state;
         ssing_msgs::DynamixelCommand ssing;
         std::vector<std::string> joint_name = {"joint1","joint2","joint3","joint4"};

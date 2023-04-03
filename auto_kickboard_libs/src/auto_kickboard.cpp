@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "auto_kickboard");
@@ -15,9 +14,9 @@ int main(int argc, char** argv)
     ros::NodeHandle nh("");
     ros::NodeHandle nh_priv("~");
     cout << "TEST" << endl;
-
     
-    Ssingssing sing(&nh, &nh_priv);
+    Ssingssing ssing(&nh, &nh_priv);
+
     ros::spin();
     return 0;
 }
