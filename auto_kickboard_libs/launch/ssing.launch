@@ -1,0 +1,7 @@
+<launch>
+  <arg
+    name="model" />
+  <node name ="auto_kickboard" pkg="auto_kickboard_libs" type="auto_kickboard" output="screen"/>
+  <node name ="ssing_keyboard" pkg="auto_kickboard_teleop" type="ssing_keyboard" output="screen"/>
+
+</launch>

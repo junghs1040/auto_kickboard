@@ -10,9 +10,11 @@
 // Map for movement keys
 std::map<char, std::vector<float>> moveBindings
 {
-  {'q', {0.0}},  // Initialize
-  {'w', {1.0}}, // Serving motion
-  {'e', {2.0}},  // Cleaning motion
+  {'i', {0.0}},  // Initialize
+  {'w', {1.0}}, // Go
+  {'s', {2.0}},  // Back
+  {'a', {3.0}}, // Left
+  {'d', {4.0}},  // Right
   
  
 };
@@ -22,9 +24,10 @@ const char* msg = R"(
 Hi! this is Serving Robot Controller!
 ---------------------------
 Motion Command :
-q : Initialize
-w : Serving Motion
-e : Cleaning Motion
+i : Initialize
+
+    w 
+ a  s  d
            
 anything else : Initialize
 
