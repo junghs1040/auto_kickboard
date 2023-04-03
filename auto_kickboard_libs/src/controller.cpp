@@ -43,7 +43,6 @@ void Ssingssing::CommandmsgCallback(const ssing_msgs::Ssing::ConstPtr& msg)
     
     ssing.motion = motion_num;
     
-    ROS_INFO("Command info: %f", motion_num);
     dynamixel_command_publisher.publish(ssing);
 
 }
