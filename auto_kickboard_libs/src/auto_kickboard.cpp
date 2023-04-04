@@ -7,15 +7,15 @@
 
 using namespace std;
 
+// This node is the main node to control the ssing ssing
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "auto_kickboard");
     
     ros::NodeHandle nh("");
     ros::NodeHandle nh_priv("~");
-    cout << "TEST" << endl;
     
-    Ssingssing ssing(&nh, &nh_priv);
+    Ssingssing ssing_command(&nh, &nh_priv);
 
     ros::spin();
     return 0;

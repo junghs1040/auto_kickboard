@@ -23,6 +23,7 @@ class Ssingssing
         void controlLoop(const ros::TimerEvent& event);
         void CommandmsgCallback(const ssing_msgs::Ssing::ConstPtr& msg);
         void publishCommands(std::vector<float> target_joint_position);
+	double angle = 0.0 ;
         
 
         
@@ -36,7 +37,7 @@ class Ssingssing
         ros::Subscriber object_position_subscriber;
         ros::Subscriber control_keyboard_subscriber;
         std::vector<std::vector<double>> target_joint_position;
-        int control_command_; // 0: Initialize 1: Pick up , 2: Pull down, 3: Stretch Arm, 4:Pull Arm
+        int control_command_; 
         float something;
         //ServingCommand serving_command;
         sensor_msgs::JointState joint_state;

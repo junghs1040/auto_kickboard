@@ -4,8 +4,7 @@
 Ssingssing::Ssingssing(ros::NodeHandle *nh, ros::NodeHandle *nh_priv)
 {
     double loop_rate = 100.0;
-    
-    serving_command_publisher = nh -> advertise<sensor_msgs::JointState>("joint_states", 1); // rviz simulation
+
     dynamixel_command_publisher = nh -> advertise<ssing_msgs::DynamixelCommand>("dynamixel_workbench/dynamixel_position_command", 1);
     
     control_keyboard_subscriber = nh -> subscribe("ssing_msg", 1000, &Ssingssing::CommandmsgCallback, this);
@@ -27,21 +26,42 @@ void Ssingssing::CommandmsgCallback(const ssing_msgs::Ssing::ConstPtr& msg)
 {
 
     float motion_num = msg -> motion_command;
+    ssing_msgs::JointPosition position_info;
     ROS_INFO("Command info: %f", motion_num);
 
     if (motion_num == 0.0) // Initialize 
     {
-        //target_joint_position = serving_command.Initialize();
-        //test : target_joint_position ={{1.1,1.1,1.1,1.1},{1.2,1.1,1.4,1.1},{1.1,1.1,1.1,1.1},{1.1,1.1,1.5,1.1}};
+    	std::vector<double> initialize_position;
+    	initialize_position = {0.0};
+        target_joint_position = {initialize_position};
     }
 
-    else if (motion_num == 1.0) // Serving 
+    else if (motion_num == 1.0) // Go
     {
-        //target_joint_position = serving_command.ReturnTargetJointPosition();        
+         
     }
+
+    else if (motion_num == 2.0) // Back
+    {
+         
+    }
+
+    else if (motion_num == 3.0) // Left 
+    {
+	angle += 0.1;
+        target_joint_position = {{angle}};
+    }    
     
+    else if (motion_num == 4.0) // Right
+    {
+	angle -= 0.1;
+        target_joint_position = {{angle}};
+             
+    }    
     
     ssing.motion = motion_num;
+    //position_info.positions.push_back(target_joint_position);
+    //ssing.joint_position = target_joint_position;
     
     dynamixel_command_publisher.publish(ssing);
 
