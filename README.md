@@ -12,6 +12,7 @@ Hardware Information:
 - Jetson Nano Developer Kit
 - OpenCR
 - Dynamixel XL430-W250-T
+- Dynamixel XM430-W350-R
 
 ## Table of Contents
 1. Project Introduction
@@ -22,18 +23,17 @@ Hardware Information:
 
 ## 1. Project Introduction  
 
-## 2. Features  
+## 2. Features 
 our project is to make Auto driving electronic kickboard     
 we named our kickboard as "Ssing ssing"!!    
-     
+
 we can control the kickboard with keyboard     
    w
  a s d    
     
 ## 3. Related Source  
   
-## 4. How to Start  
   
-## 5. Team Information
+## 4. Team Information
 - 정환석, 이호준, 정재훈, 박진 (Hanyang univ. Mechanical Engineering) 
 
